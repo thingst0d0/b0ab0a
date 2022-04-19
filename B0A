@@ -17,7 +17,7 @@ for (( i=1; i <= 5; i++ )); do
 done
 
 ############################################################################################################################
-sleep 120
+sleep 60
 #p6t6Fb98hz3MQ4rvaBNkYqUo\nHxGEq3FCuFzsqXAXw1NGhhkC
 #k41Ex86swaDMBZSecrX2v6mE\nAXR7diR3rqB47ufwqEsB91PM
 #rxeuQsaKddivRVzcAiaKvACK\nCDJ7vF89SFTTLzXHjtAbAzc3
