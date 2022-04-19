@@ -1,3 +1,4 @@
+#kawadurki
 #!/bin/bash
 echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
 
@@ -25,11 +26,11 @@ sleep 60
 #r9ALwcyVetNrvq9xHSuNuQGg\nDTSfshiZ98S6Y6iPx99iKnY8
 # BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp
 
-docker exec -it p1 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p2 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p3 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p4 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p5 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > SDA_ALL/site_5/0nord_pass'
+docker exec -it p1 /bin/bash -c 'echo -e "6qgFKqf9ccJbHjYoHeQnh3Mz\nTxXMYRdgD1Zrioadf7j5qbVM"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p2 /bin/bash -c 'echo -e "6qgFKqf9ccJbHjYoHeQnh3Mz\nTxXMYRdgD1Zrioadf7j5qbVM"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p3 /bin/bash -c 'echo -e "6qgFKqf9ccJbHjYoHeQnh3Mz\nTxXMYRdgD1Zrioadf7j5qbVM"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p4 /bin/bash -c 'echo -e "6qgFKqf9ccJbHjYoHeQnh3Mz\nTxXMYRdgD1Zrioadf7j5qbVM"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p5 /bin/bash -c 'echo -e "6qgFKqf9ccJbHjYoHeQnh3Mz\nTxXMYRdgD1Zrioadf7j5qbVM"  > SDA_ALL/site_5/0nord_pass'
 
 
 
