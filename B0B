@@ -1,3 +1,4 @@
+#kawadurki
 #!/bin/bash
 echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
 
