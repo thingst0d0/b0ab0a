@@ -1,6 +1,6 @@
 #!/bin/bash
-# export su_img_2=$SUDO_USER
-# echo $su_img_2
+echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
+
 export su_img_3=$(cat read.me)
 echo  $su_img_3
 export host=$su_img_3"-gc-emma-"
@@ -9,17 +9,13 @@ export img="quay.io/xm0uray/site_5:main"
 export sess="p"
 echo $img
 docker rm -f $(docker ps -q)
-#docker rmi -f $img
-#docker rmi -f $img2
 echo -e "nameserver 103.86.96.100\nnameserver 103.86.99.100" >  /etc/resolv.conf
 
 echo  "HOST : [" $host " ] " " | IMAGE_DOCKER : [ "$img " ]" $sess
 for (( i=1; i <= 5; i++ )); do
   bash -c  "docker run -d --name $sess$i --cap-add=NET_ADMIN  -h  $host$i --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro  $img"
 done
-# for (( i=5; i <= 5; i++ )); do
-#   bash -c  "docker run -d --name $sess$i --cap-add=NET_ADMIN  -h  $host$i --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro $img2"
-# done
+
 ############################################################################################################################
 sleep 120
 #p6t6Fb98hz3MQ4rvaBNkYqUo\nHxGEq3FCuFzsqXAXw1NGhhkC
@@ -28,9 +24,13 @@ sleep 120
 #gHAq4AzDPcbiLquZD9vWaeoY\nyuiKYmhvr9hGk93aZRB2QZkz
 #r9ALwcyVetNrvq9xHSuNuQGg\nDTSfshiZ98S6Y6iPx99iKnY8
 # BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp
-docker exec -it p1 /bin/bash -c 'echo -e "BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp"   > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p2 /bin/bash -c 'echo -e "BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp"   > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p3 /bin/bash -c 'echo -e "BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp"  > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p4 /bin/bash -c 'echo -e "BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp"   > SDA_ALL/site_5/0nord_pass' &&
-docker exec -it p5 /bin/bash -c 'echo -e "BoLdxsFmxNg6pg56ZygNghq5\nPfaycVGqH4F44HfwbNirvVwp"   > SDA_ALL/site_5/0nord_pass'
+
+docker exec -it p1 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > /root/SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p2 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > /root/SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p3 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > /root/SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p4 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > /root/SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p5 /bin/bash -c 'echo -e "wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"  > /root/SDA_ALL/site_5/0nord_pass'
+
+
+
 
