@@ -1,0 +1,31 @@
+#!/bin/bash
+#key="wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"
+#comd_docker="echo -e '"$key"'  > SDA_ALL/site_5/0nord_pass"
+#quoted_cmd="'"$comd_docker"'"
+get_host= $(grep '^sudo:.*$' /etc/group | cut -d: -f4)
+echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
+echo $get_host
+export su_img_3=$(cat read.me)
+echo  $su_img_3
+export host=$su_img_3"-gc-emma-"
+export img2="quay.io/xm0uray/site_5:tag1"
+export img="quay.io/xm0uray/site_5:main"
+export sess="p"
+echo $img
+docker rm -f $(docker ps -q)
+echo -e "nameserver 103.86.96.100\nnameserver 103.86.99.100" >  /etc/resolv.conf
+
+echo  "HOST : [" $host " ] " " | IMAGE_DOCKER : [ "$img " ]" $sess
+for (( i=1; i <= 5; i++ )); do
+  bash -c  "docker run -d --name $sess$i --cap-add=NET_ADMIN  -h  $host$i --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro  $img"
+done
+
+############################################################################################################################
+sleep 75
+
+docker exec -it p1 /bin/bash -c 'echo -e "8x1wr1WzDav6hoCkwAW8FMpe\ngMnsNqmVsJYAMytg49kEd5yg"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p2 /bin/bash -c 'echo -e "8x1wr1WzDav6hoCkwAW8FMpe\ngMnsNqmVsJYAMytg49kEd5yg"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p3 /bin/bash -c 'echo -e "8x1wr1WzDav6hoCkwAW8FMpe\ngMnsNqmVsJYAMytg49kEd5yg"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p4 /bin/bash -c 'echo -e "8x1wr1WzDav6hoCkwAW8FMpe\ngMnsNqmVsJYAMytg49kEd5yg"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p5 /bin/bash -c 'echo -e "8x1wr1WzDav6hoCkwAW8FMpe\ngMnsNqmVsJYAMytg49kEd5yg"  > SDA_ALL/site_5/0nord_pass'
+
