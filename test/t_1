@@ -1,6 +1,13 @@
 #!/bin/bash
-echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
 
+
+#key="wU5xuRpXbx9vxBK9T5AgGDoT\n9M9KdoS4HcFwdt3Kq4aQt1H2"
+
+#comd_docker="echo -e '"$key"'  > SDA_ALL/site_5/0nord_pass"
+#quoted_cmd="'"$comd_docker"'"
+get_host= $(grep '^sudo:.*$' /etc/group | cut -d: -f4)
+echo  $(grep '^sudo:.*$' /etc/group | cut -d: -f4) > read.me
+echo $get_host
 export su_img_3=$(cat read.me)
 echo  $su_img_3
 export host=$su_img_3"-gc-emma-"
